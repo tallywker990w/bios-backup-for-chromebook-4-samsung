@@ -1,0 +1,14 @@
+WARNING IF YOU DO MBR THEN YOU HAVE TO USE VENTOY
+
+First you got to do full rom if you dont want to but rw legacy is weird but do esc refresh and power and do ctrl + d to make it developer mode 
+press ctrl do again once it says its in dev mode DONT PRESS SPACE and do ctrl + alt + f2/forwards button and type
+'cd; mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh'
+  Heads up you do need to dissconnect battery or remove write protect screw to do full rom or use suzy q cable
+and if your doing rw legacy press 1 and enter and press y and enter
+MAKE SURE YOU HAVE A USB DRIVE
+Plug in your usb drive and install Ventoy 'https://sourceforge.net/projects/ventoy/files/latest/download' Download that
+Now unzip it and goto the file and goto the file again and press the disk one Warning it will erase everything on your USB
+After doing that you download any operating system you like and put the plain iso on the USB Now plug it into your Chromebook
+and you can reboot after the firmware flash if you did full rom or rw legacy press r and enter and you will see a white screen
+Do ctrl + L and that will bring you into boot menu and press 1 for usb and install it! Have fun (btw i dont have all chromebook backup
+bios) Oh and also you need a different pc to use ventoy Sorryyyyyyyyyy
