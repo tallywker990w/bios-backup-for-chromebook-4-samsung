@@ -13,4 +13,7 @@ and you can reboot after the firmware flash if you did full rom or rw legacy pre
 Do ctrl + L and that will bring you into boot menu and press 1 for usb and install it! Have fun (btw i dont have all chromebook backup
 bios) Oh and also you need a different pc to use ventoy Sorryyyyyyyyyy
 
-IF BOOTLOADER LOCKS UP THEN DOWNLOAD THE BACKUP FILE if you do have a 2nd usb USE IT put the backup file ON THE USB AND DO ctrl + u on the keyboard to do it
+IF BOOTLOADER LOCKS UP THEN DOWNLOAD THE BACKUP FILE btw if you install windows the bootloader will most certainly lock up so i recommend buying a debug board to unlock
+write protect or just take off the back and remove battery and you do have to reinstall chromeos if bootloader locks up
+if only ctrl u doesnt work
+
