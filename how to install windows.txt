@@ -17,3 +17,4 @@ IF BOOTLOADER LOCKS UP THEN DOWNLOAD THE BACKUP FILE btw if you install windows 
 write protect or just take off the back and remove battery and you do have to reinstall chromeos if bootloader locks up
 if only ctrl u doesnt work
 
+if windows doesnt work just use linux mint or any type of linux distro you want to use until you get a suzy q cable
