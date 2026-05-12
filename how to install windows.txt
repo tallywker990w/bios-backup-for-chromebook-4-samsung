@@ -1,20 +1,45 @@
-WARNING IF YOU DO MBR THEN YOU HAVE TO USE VENTOY
+This guide covers how to flash your BIOS and transition from ChromeOS to Windows or Linux.
 
-First you got to do full rom if you dont want to but rw legacy is weird but do esc refresh and power and do ctrl + d to make it developer mode 
-press ctrl do again once it says its in dev mode DONT PRESS SPACE and do ctrl + alt + f2/forwards button and type
-'cd; mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh'
-  Heads up you do need to dissconnect battery or remove write protect screw to do full rom or use suzy q cable
-and if your doing rw legacy press 1 and enter and press y and enter
-MAKE SURE YOU HAVE A USB DRIVE
-Plug in your usb drive and install Ventoy 'https://sourceforge.net/projects/ventoy/files/latest/download' Download that
-Now unzip it and goto the file and goto the file again and press the disk one Warning it will erase everything on your USB
-After doing that you download any operating system you like and put the plain iso on the USB Now plug it into your Chromebook
-and you can reboot after the firmware flash if you did full rom or rw legacy press r and enter and you will see a white screen
-Do ctrl + L and that will bring you into boot menu and press 1 for usb and install it! Have fun (btw i dont have all chromebook backup
-bios) Oh and also you need a different pc to use ventoy Sorryyyyyyyyyy
+⚠️ CRITICAL WARNINGS
+MBR Booting: If you are using MBR (Master Boot Record) partition style, you MUST use Ventoy to boot.
 
-IF BOOTLOADER LOCKS UP THEN DOWNLOAD THE BACKUP FILE btw if you install windows the bootloader will most certainly lock up so i recommend buying a debug board to unlock
-write protect or just take off the back and remove battery and you do have to reinstall chromeos if bootloader locks up
-if only ctrl u doesnt work
+Windows Bootloader: Installing Windows will almost certainly lock your bootloader. If your system locks up, you will need to use your BIOS backup file to recover.
 
-if windows doesnt work just use linux mint or any type of linux distro you want to use until you get a suzy q cable
+Debug Boards: I highly recommend using a SuzyQable or a debug board to unlock write protection safely.
+
+1. Enter Developer Mode
+Before you can run any scripts, you must break out of the standard ChromeOS security:
+Turn off the Chromebook.
+Press Esc + Refresh + Power.
+At the "Recovery" screen, press Ctrl + D.
+Confirm the transition. Note: From now on, whenever you boot, you must press Ctrl + D. DO NOT PRESS SPACE, or you will factory reset the device.
+
+2. Disable Hardware Write Protection (WP)
+To flash a Full ROM BIOS, you must physically or electronically disable Write Protection:
+Option A: Use a SuzyQable (Best for Samsung Chromebook 4).
+Option B: Open the device and disconnect the battery.
+Option C: Remove the physical write-protect screw (found on older models).
+
+3. Flash the Firmware
+Once WP is disabled, boot into ChromeOS, press Ctrl + Alt + F2 (Forward button), log in as chronos, and run:
+cd; curl -LO mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh
+Option 3 (Full ROM): Recommended for a pure Windows/Linux experience.
+Option 1 (RW_Legacy): Use this if you want to keep ChromeOS alongside another OS.
+BACKUP: When the script asks to back up your firmware, DO IT. Store that .rom file on a USB or a cloud service like MediaFire.
+
+4. Create Your Bootable USB
+You will need a separate PC to prepare your installation media:
+Download Ventoy: 'https://www.ventoy.net/en/download.html'
+Install Ventoy to your USB drive (Warning: This wipes all data on the USB).
+Simply drag and drop your Windows 10 or Linux ISO file onto the USB drive.
+
+5. Installation
+Plug your USB into the Chromebook and reboot.
+If using Full ROM, it should boot straight to Ventoy.
+If using RW_Legacy, press Ctrl + L at the white splash screen, then press 1.
+Follow the installer instructions for your chosen OS.
+
+🛠️ Troubleshooting
+Windows Failure: If Windows won't install or run correctly, use Linux Mint instead. It is much more stable on Chromebook hardware.
+Bootloader Lock: If you get locked out, you must reinstall ChromeOS using a recovery image or flash your BIOS backup using a SuzyQable.
+Reference Backups: If you lost your BIOS file, check my repository here for a reference: tallywker990 GitHub.
